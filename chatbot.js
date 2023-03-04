@@ -42,7 +42,7 @@ const sessionId = uuid.v4();
 const projectId = "chatbot-378305"; // Ingresa aquí el ID de tu proyecto en Dialogflow
 const credentials = {
   client_email: 'josepuello112000@gmail.com',
-  private_key: '85Ny!m@FC!'
+  private_key: '85Er*}12-#1!'
 };
 
 app.use(bodyParser.urlencoded({ extended: false }));
