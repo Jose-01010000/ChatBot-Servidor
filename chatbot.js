@@ -32,7 +32,8 @@
 
 const express = require("express");
 const bodyParser = require("body-parser");
-const dialogflow = require("dialogflow");
+// const dialogflow = require("dialogflow");
+const dialogflow = require('@google-cloud/dialogflow');
 const uuid = require("uuid");
 
 const app = express();
@@ -59,7 +60,7 @@ app.post("/webhook", async (req, res) => {
   }
 
   try {
-    const sessionPath = sessionClient.sessionPath(projectId, credentials);
+    const sessionPath = sessionClient.projectAgentSessionPath(projectId, sessionId);
     const request = {
       session: sessionPath,
       queryInput: {
